@@ -1,0 +1,38 @@
+plugins {
+    id'java'
+    id'application'
+    id'com.github.johnrengelman.shadow' version '6.0.0'
+}
+
+mainClassName = 'bot.Bot'
+
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        name 'm2-dv8tion'
+        url 'https://m2.dv8tion.net/releases'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.dv8tion:JDA:4.2.1_255'
+    implementation 'com.google.api-client:google-api-client:1.30.4'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.30.6'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev581-1.25.0'
+    implementation 'org.apache.cassandra:cassandra-all:0.8.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.10.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.1'
+    implementation group: 'com.twilio.sdk', name: 'twilio', version: '8.10.0'
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.29'
+    implementation group: 'com.sparkjava', name: 'spark-core', version: '2.7.1'
+    implementation 'io.github.cdimascio:dotenv-java:2.2.0'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'mysql:mysql-connector-java:8.0.28'
+
+}
+
+compileJava.options.encoding = 'UTF-8'
