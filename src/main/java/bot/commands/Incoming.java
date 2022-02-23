@@ -4,6 +4,7 @@ import bot.Bot;
 import bot.Player;
 import bot.readers.Database;
 import com.twilio.Twilio;
+import com.twilio.exception.ApiException;
 import com.twilio.rest.api.v2010.account.Call;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
@@ -55,9 +56,9 @@ public class Incoming extends ListenerAdapter {
                     event.getChannel().sendMessage("Calling " + members.get(args[1]).getName()).queue();
                 }
 
-            } catch (NullPointerException e) {
+            } catch (NullPointerException | ApiException e) {
                 EmbedBuilder notFound = new EmbedBuilder();
-                notFound.setTitle("Player Not Found");
+                notFound.setTitle("Number Not Found");
                 notFound.setDescription("There is no number associated with the player: " + args[1]);
                 notFound.setColor(0xf70505);
                 event.getChannel().sendMessage(notFound.build()).queue();
@@ -81,6 +82,8 @@ public class Incoming extends ListenerAdapter {
         Database data = new Database();
         if(args[1].startsWith("<@!"))
             members = data.readData(members,true);
+        else if(args[1].startsWith("<@"))
+            System.err.println("Discord User ID does not contain '!' ");
         else{
             members = data.readData(members,false);
         }

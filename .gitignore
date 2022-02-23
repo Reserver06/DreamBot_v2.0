@@ -19,7 +19,6 @@
 *.tar.gz
 *.rar
 *.env
-build
 tokens
 src/main/resources
 out

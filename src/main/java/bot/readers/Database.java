@@ -92,8 +92,8 @@ public class Database {
     private Statement startConnection() throws SQLException {
         String url = "jdbc:mysql://na05-sql.pebblehost.com/customer_183968_dreambot";
         String user = "customer_183968_dreambot";
-        String password = dotenv.get("DATABASE_PASSWORD");
-
+//        String password = dotenv.get("DATABASE_PASSWORD");
+        String password = "Es_14997369!";
         Connection connection = DriverManager.getConnection(url,user,password);
         return connection.createStatement();
     }
