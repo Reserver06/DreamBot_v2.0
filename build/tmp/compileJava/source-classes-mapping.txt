@@ -1,11 +1,11 @@
-bot/readers/LootSheet.java
- bot.readers.LootSheet
-bot/commands/NoUReader.java
- bot.commands.NoUReader
+bot/Contacts.java
+ bot.Contacts
+bot/readers/Database.java
+ bot.readers.Database
 bot/commands/Clear.java
  bot.commands.Clear
-bot/readers/LootSheetAvg.java
- bot.readers.LootSheetAvg
+bot/commands/Loot.java
+ bot.commands.Loot
 bot/commands/Ping.java
  bot.commands.Ping
 bot/commands/ReactRole.java
@@ -14,21 +14,21 @@ bot/Player.java
  bot.Player
 bot/readers/ContactSheet.java
  bot.readers.ContactSheet
-bot/Contacts.java
- bot.Contacts
-bot/Bot.java
- bot.Bot
-bot/commands/Info.java
- bot.commands.Info
+bot/commands/_Call.java
+ bot.commands._Call
 bot/commands/LootList.java
  bot.commands.LootList
-bot/readers/Database.java
- bot.readers.Database
+bot/commands/Info.java
+ bot.commands.Info
 bot/commands/Add.java
  bot.commands.Add
 bot/commands/Incoming.java
  bot.commands.Incoming
-bot/commands/Loot.java
- bot.commands.Loot
-bot/commands/_Call.java
- bot.commands._Call
+bot/commands/NoUReader.java
+ bot.commands.NoUReader
+bot/readers/LootSheetAvg.java
+ bot.readers.LootSheetAvg
+bot/Bot.java
+ bot.Bot
+bot/readers/LootSheet.java
+ bot.readers.LootSheet
